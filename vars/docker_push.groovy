@@ -3,7 +3,7 @@ withCredentials([usernamePassword(
                 credentialsId: "dockerHubCred",
                 passwordVariable: "dockerHubPass",
                 usernameVariable: "dockerHubUser")]) {
-                sh 'docker login -u ${dockerHubUser} -p ${dockerHubPass}'                
+                sh "docker login -u ${dockerHubUser} -p ${dockerHubPass}"                
                 }
-                sh 'docker push ${dockerhubuser}/${Project}:${ImageTag}'
+                sh "docker push ${dockerhubuser}/${Project}:${ImageTag}"
 }
